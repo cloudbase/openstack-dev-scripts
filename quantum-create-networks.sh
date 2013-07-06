@@ -4,7 +4,7 @@
 #quantum subnet-create net2 10.0.2.0/24
 
 NETID1=`quantum net-create net1 | awk '{if (NR == 6) {print $4}}'`
-SUBNETID1=`quantum subnet-create net1 10.0.1.0/24 --dns_nameservers list=true 192.168.1.1 8.8.8.8 | awk '{if (NR == 11) {print $4}}'`
+SUBNETID1=`quantum subnet-create net1 10.0.1.0/24 --dns_nameservers list=true 8.8.8.8 | awk '{if (NR == 11) {print $4}}'`
 
 NETID2=`quantum net-create net2 --provider:network_type flat --provider:physical_network physnet1 | awk '{if (NR == 6) {print $4}}'`
 SUBNETID2=`quantum subnet-create net2 10.0.2.0/24 | awk '{if (NR == 11) {print $4}}'`
