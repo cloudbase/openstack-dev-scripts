@@ -19,3 +19,10 @@ quantum subnet-create ext_net --allocation-pool start=192.168.209.100,end=192.16
 
 quantum router-gateway-set $ROUTERID1 $EXTNETID1
 
+# Enable ping, SSH and RDP
+
+nova secgroup-add-rule default icmp 8 8 0.0.0.0/0
+nova secgroup-add-rule default tcp 22 22 0.0.0.0/0
+nova secgroup-add-rule default tcp 3389 3389 0.0.0.0/0
+
+
