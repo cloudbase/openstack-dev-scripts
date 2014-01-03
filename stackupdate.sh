@@ -8,7 +8,7 @@ cd /opt/stack/cinder
 git pull
 cd /opt/stack/keystone
 git pull
-cd /opt/stack/quantum
+cd /opt/stack/neutron
 git pull
 cd /opt/stack/horizon
 git pull
@@ -30,7 +30,7 @@ cd /opt/stack/python-keystoneclient
 git pull
 python setup.py build
 sudo python setup.py install --force
-cd /opt/stack/python-quantumclient
+cd /opt/stack/python-neutronclient
 git pull
 python setup.py build
 sudo python setup.py install --force
